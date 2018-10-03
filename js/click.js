@@ -14,6 +14,7 @@ document.addEventListener("click", function(event) {
         }
 
         if (i == 1) {
+            //First
             temp.innerText += "Clicked " + i + ":" + event.target.id + "\n";
             i = 2;
             return;
