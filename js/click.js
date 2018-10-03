@@ -3,8 +3,12 @@ let game = new Set();
 
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("box")) {
-        event.target.innerText = "x";
         game.add(event.target.id);
+        
+        game.forEach( function(item) {
+            box = document.querySelector(`#${item}`)
+            box.innerText = "x";
+        });
 
         if(checkWinner()){
             result.innerText="Winner player: " + i;
