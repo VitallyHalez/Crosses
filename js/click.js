@@ -1,6 +1,6 @@
 let player = 1;
 let game = new Set();
-
+//
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("box")) {
         game.add(event.target.id);
