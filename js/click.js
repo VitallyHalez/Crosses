@@ -20,7 +20,7 @@ document.addEventListener("click", function(event) {
             player = 2;
             return;
         }
-
+///
         if (player == 2) {
             player = 1;
             return;
