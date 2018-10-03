@@ -1,4 +1,4 @@
-let i = 1;
+let player = 1;
 let game = new Set();
 
 document.addEventListener("click", function(event) {
@@ -9,20 +9,20 @@ document.addEventListener("click", function(event) {
             box = document.querySelector(`#${item}`)
             box.innerText = "x";
         });
-
+        
+        temp.innerText += "Clicked " + player + ":" + event.target.id + "\n";
+        
         if(checkWinner()){
-            result.innerText="Winner player: " + i;
+            result.innerText="Winner player: " + player;
         }
-
-        if (i == 1) {
-            temp.innerText += "Clicked " + i + ":" + event.target.id + "\n";
-            i = 2;
+        
+        if (player == 1) {
+            player = 2;
             return;
         }
 
-        if (i == 2) {
-            temp.innerText += "Clicked " + i + ":" + event.target.id + "\n";
-            i = 1;
+        if (player == 2) {
+            player = 1;
             return;
         }
     }
